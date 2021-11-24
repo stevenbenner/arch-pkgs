@@ -1,0 +1,39 @@
+pkgbase=system-config
+pkgname=('system-config-base')
+pkgver=1
+pkgrel=1
+pkgdesc='Arch Linux system configuration'
+arch=('any')
+url='https://github.com/stevenbenner/arch-pkgs'
+license=('none')
+source=(
+	'etc-locale.conf'
+	'sudo-wheel'
+)
+sha256sums=(
+	'033252d5100cbb0028d7c15e075f63e4eb5ff7f1a923cd5cb547bcfd6b024f5b'
+	'9db7f67e68218e51ee549cba0949aae86b6c14a48ac40b851cf76aba951f70a7'
+)
+
+package_system-config-base() {
+	pkgdesc='Base system configuration'
+	install='system-config-base.install'
+
+	# base packages
+	depends=('base' 'linux' 'linux-firmware' 'man-db' 'man-pages' 'pacman-contrib')
+
+	# system packages
+	depends+=('iptables' 'logrotate' 'sudo' 'zsh' 'zsh-completions' 'zsh-syntax-highlighting')
+
+	# universal software
+	depends+=('colordiff' 'less' 'git' 'htop' 'nano' 'screenfetch' 'stow' 'wget' 'which')
+
+	# microcode
+	optdepends=(
+		'amd-ucode: AMD processor support'
+		'intel-ucode: Intel processor support'
+	)
+
+	install -Dm0644 etc-locale.conf "$pkgdir/etc/locale.conf"
+	install -Dm0600 sudo-wheel "$pkgdir/etc/sudoers.d/wheel"
+}
