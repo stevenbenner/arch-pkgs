@@ -1,5 +1,5 @@
 pkgbase=system-config
-pkgname=('system-config-base')
+pkgname=('system-config-base' 'system-config-desktop')
 pkgver=1
 pkgrel=1
 pkgdesc='Arch Linux system configuration'
@@ -36,4 +36,30 @@ package_system-config-base() {
 
 	install -Dm0644 etc-locale.conf "$pkgdir/etc/locale.conf"
 	install -Dm0600 sudo-wheel "$pkgdir/etc/sudoers.d/wheel"
+}
+
+package_system-config-desktop() {
+	pkgdesc='Desktop system configuration'
+
+	# standard software
+	depends=('chromium' 'firefox' 'keepassxc' 'mpv' 'vlc')
+
+	# fonts
+	depends+=(
+		'adobe-source-code-pro-fonts'
+		'gnu-free-fonts'
+		'otf-ipafont'
+		'ttf-anonymous-pro'
+		'ttf-bitstream-vera'
+		'ttf-droid'
+		'ttf-inconsolata'
+		'ttf-liberation'
+		'ttf-roboto'
+	)
+
+	# graphics drivers
+	optdepends=(
+		'mesa: AMD graphics support'
+		'nvidia: Nvidia graphics support'
+	)
 }
