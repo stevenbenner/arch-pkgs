@@ -1,0 +1,4 @@
+post_install() {
+	systemctl enable --now NetworkManager.service
+	systemctl enable --now gdm.service
+}

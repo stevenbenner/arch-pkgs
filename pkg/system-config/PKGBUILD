@@ -1,5 +1,5 @@
 pkgbase=system-config
-pkgname=('system-config-base' 'system-config-desktop')
+pkgname=('system-config-base' 'system-config-desktop' 'system-config-gnome')
 pkgver=1
 pkgrel=1
 pkgdesc='Arch Linux system configuration'
@@ -62,4 +62,54 @@ package_system-config-desktop() {
 		'mesa: AMD graphics support'
 		'nvidia: Nvidia graphics support'
 	)
+}
+
+package_system-config-gnome() {
+	pkgdesc='GNOME desktop environment configuration'
+	install='system-config-gnome.install'
+
+	# inherit common desktop config
+	depends=('system-config-desktop')
+
+	# supporting packages
+	depends+=('networkmanager')
+
+	# gnome group packages
+	depends+=(
+		'eog'
+		'gdm'
+		'gedit'
+		'gnome-backgrounds'
+		'gnome-calculator'
+		'gnome-calendar'
+		'gnome-characters'
+		'gnome-clocks'
+		'gnome-color-manager'
+		'gnome-control-center'
+		'gnome-disk-utility'
+		'gnome-font-viewer'
+		'gnome-keyring'
+		'gnome-logs'
+		'gnome-menus'
+		'gnome-screenshot'
+		'gnome-session'
+		'gnome-settings-daemon'
+		'gnome-shell'
+		'gnome-shell-extensions'
+		'gnome-system-monitor'
+		'gnome-terminal'
+		'gnome-themes-extra'
+		'gnome-user-docs'
+		'gnome-weather'
+		'gvfs'
+		'gvfs-nfs'
+		'gvfs-smb'
+		'mutter'
+		'nautilus'
+		'sushi'
+		'xdg-user-dirs-gtk'
+	)
+
+	# gnome-extra group packages
+	depends+=('gnome-tweaks' 'gnome-usage')
 }
