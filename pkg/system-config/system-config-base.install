@@ -27,9 +27,16 @@ post_install() {
 }
 
 post_upgrade() {
+	# system time
 	ln -sf /usr/share/zoneinfo/America/Los_Angeles /etc/localtime
 	hwclock --systohc --utc
 
+	# system locale
 	sed 's/#en_US.UTF-8/en_US.UTF-8/' -i /etc/locale.gen
 	locale-gen
+
+	# pacman.conf
+	sed 's/#Color/Color/' -i /etc/pacman.conf
+	sed 's/#VerbosePkgLists/VerbosePkgLists/' -i /etc/pacman.conf
+	sed 's/#ParallelDownloads/ParallelDownloads/' -i /etc/pacman.conf
 }
