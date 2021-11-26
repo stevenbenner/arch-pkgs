@@ -22,11 +22,14 @@ package_system-config-base() {
 	# base packages
 	depends=('base' 'linux' 'linux-firmware' 'man-db' 'man-pages' 'pacman-contrib')
 
+	# base-devel packages
+	depends+=('autoconf' 'automake' 'bison' 'gcc' 'highlight' 'make' 'patch' 'pkgconf' 'texinfo' 'which')
+
 	# system packages
 	depends+=('iptables' 'logrotate' 'nfs-utils' 'sudo' 'zsh' 'zsh-completions' 'zsh-syntax-highlighting')
 
 	# universal software
-	depends+=('colordiff' 'less' 'git' 'htop' 'nano' 'screenfetch' 'stow' 'wget' 'which')
+	depends+=('colordiff' 'less' 'git' 'htop' 'nano' 'screenfetch' 'stow' 'wget')
 
 	# microcode
 	optdepends=(
