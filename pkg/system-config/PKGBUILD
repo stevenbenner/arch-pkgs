@@ -23,7 +23,7 @@ package_system-config-base() {
 	depends=('base' 'linux' 'linux-firmware' 'man-db' 'man-pages' 'pacman-contrib')
 
 	# system packages
-	depends+=('iptables' 'logrotate' 'sudo' 'zsh' 'zsh-completions' 'zsh-syntax-highlighting')
+	depends+=('iptables' 'logrotate' 'nfs-utils' 'sudo' 'zsh' 'zsh-completions' 'zsh-syntax-highlighting')
 
 	# universal software
 	depends+=('colordiff' 'less' 'git' 'htop' 'nano' 'screenfetch' 'stow' 'wget' 'which')
