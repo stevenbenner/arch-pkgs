@@ -29,7 +29,7 @@ package_system-config-base() {
 	depends+=('iptables' 'logrotate' 'nfs-utils' 'sudo' 'zsh' 'zsh-completions' 'zsh-syntax-highlighting')
 
 	# universal software
-	depends+=('colordiff' 'less' 'git' 'htop' 'nano' 'screenfetch' 'stow' 'wget')
+	depends+=('colordiff' 'git' 'htop' 'less' 'nano' 'nmap' 'screenfetch' 'stow' 'wget')
 
 	# microcode
 	optdepends=(
