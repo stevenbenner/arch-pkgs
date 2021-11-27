@@ -20,7 +20,7 @@ package_system-config-base() {
 	install='system-config-base.install'
 
 	# base packages
-	depends=('base' 'linux' 'linux-firmware' 'man-db' 'man-pages' 'pacman-contrib')
+	depends=('base' 'linux' 'linux-firmware' 'lvm2' 'man-db' 'man-pages' 'pacman-contrib')
 
 	# base-devel packages
 	depends+=('autoconf' 'automake' 'bison' 'gcc' 'highlight' 'make' 'patch' 'pkgconf' 'texinfo' 'which')
