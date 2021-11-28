@@ -28,7 +28,7 @@ package_system-config-base() {
 	depends+=('autoconf' 'automake' 'bison' 'gcc' 'highlight' 'make' 'patch' 'pkgconf' 'texinfo' 'which')
 
 	# system packages
-	depends+=('iptables' 'logrotate' 'nfs-utils' 'sudo' 'zsh' 'zsh-completions' 'zsh-syntax-highlighting')
+	depends+=('iptables' 'logrotate' 'nfs-utils' 'sudo' 'zsh' 'zsh-syntax-highlighting')
 
 	# universal software
 	depends+=('colordiff' 'git' 'htop' 'less' 'nano' 'nmap' 'screenfetch' 'stow' 'wget')
