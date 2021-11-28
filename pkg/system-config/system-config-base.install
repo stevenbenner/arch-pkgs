@@ -21,6 +21,18 @@ COMMIT
 EOF
 }
 
+_set_reflector_config() {
+	cat > /etc/xdg/reflector/reflector.conf <<EOF
+# Reflector configuration file for the systemd service.
+--save /etc/pacman.d/mirrorlist
+--protocol https
+--age 12
+--country US
+--sort rate
+--number 10
+EOF
+}
+
 post_install() {
 	_set_iptables_rules
 	post_upgrade
@@ -39,4 +51,7 @@ post_upgrade() {
 	sed 's/#Color/Color/' -i /etc/pacman.conf
 	sed 's/#VerbosePkgLists/VerbosePkgLists/' -i /etc/pacman.conf
 	sed 's/#ParallelDownloads/ParallelDownloads/' -i /etc/pacman.conf
+
+	# reflector.conf
+	_set_reflector_config
 }
