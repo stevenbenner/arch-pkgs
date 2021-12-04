@@ -7,6 +7,10 @@ ifeq (, $(shell which shellcheck))
 $(error "Failed! Could not find shellcheck.")
 endif
 
+ifeq (, $(shell which namcap))
+$(error "Failed! Could not find namcap.")
+endif
+
 $(REPO_DIR): system-config
 	@echo "Updating $(TARGET_REPO) package repo..."
 	mkdir -p $@
@@ -22,6 +26,8 @@ check:
 	@echo "Running shellcheck on files..."
 	shellcheck -e SC2034 -e SC2148 -e SC2154 pkg/**/PKGBUILD
 	shellcheck -e SC2148 pkg/**/*.install
+	@echo "Running namcap on files..."
+	namcap -ie splitpkgmakedeps pkg/**/PKGBUILD
 
 .PHONY: clean
 clean:
