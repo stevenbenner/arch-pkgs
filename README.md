@@ -46,3 +46,21 @@ Server = http://serverhostname/repo
 
 * Replace "private" with the `TARGET_REPO` specified in the makefile
 * Replace "serverhostname" with the real host name or IP address of the server hosting the repo folder.
+
+## Resources
+
+Special thanks to the Arch Linux enthusiasts who published articles and code explaining how to accomplish this. Here are some particularly useful links for anyone wanting to make something like this.
+
+### Articles
+
+* https://disconnected.systems/blog/archlinux-meta-packages/
+* https://ownyourbits.com/2019/07/21/replicate-your-system-with-self-hosted-arch-linux-metapackages/
+* https://wiki.archlinux.org/title/Creating_packages
+
+### Code
+
+* https://github.com/mdaffin/arch-pkgs
+* https://github.com/Foxboron/PKGBUILDS/tree/master/foxboron-system
+* https://github.com/Earnestly/pkgbuilds/tree/master/system-config
+* https://github.com/krathalan/pkgbuilds
+* https://github.com/patatahooligan/meta-packages
