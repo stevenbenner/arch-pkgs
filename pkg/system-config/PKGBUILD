@@ -1,5 +1,5 @@
 pkgbase=system-config
-pkgname=('system-config-base' 'system-config-desktop' 'system-config-gnome')
+pkgname=('system-config-base' 'system-config-desktop' 'system-config-gnome' 'system-config-xfce')
 pkgver=3
 pkgrel=1
 pkgdesc='Arch Linux system configuration'
@@ -121,4 +121,57 @@ package_system-config-gnome() {
 
 	# gnome-extra group packages
 	depends+=('gnome-tweaks' 'gnome-usage')
+}
+
+package_system-config-xfce() {
+	pkgdesc='Xfce desktop environment configuration'
+	install='system-config-xfce.install'
+
+	# inherit common desktop config
+	depends=('system-config-desktop')
+
+	# supporting packages
+	depends+=('light-locker' 'lightdm' 'lightdm-gtk-greeter' 'xcape' 'xorg-xinput')
+
+	# xfce group packages
+	depends+=(
+		'thunar'
+		'thunar-volman'
+		'xfce4-appfinder'
+		'xfce4-panel'
+		'xfce4-power-manager'
+		'xfce4-session'
+		'xfce4-settings'
+		'xfce4-terminal'
+		'xfdesktop'
+		'xfwm4'
+		'xfwm4-themes'
+	)
+
+	# xfce-goodies group packages
+	depends+=(
+		'mousepad'
+		'ristretto'
+		'thunar-archive-plugin'
+		'thunar-media-tags-plugin'
+		'xfburn'
+		'xfce4-artwork'
+		'xfce4-clipman-plugin'
+		'xfce4-cpufreq-plugin'
+		'xfce4-cpugraph-plugin'
+		'xfce4-datetime-plugin'
+		'xfce4-diskperf-plugin'
+		'xfce4-fsguard-plugin'
+		'xfce4-mount-plugin'
+		'xfce4-netload-plugin'
+		'xfce4-notes-plugin'
+		'xfce4-notifyd'
+		'xfce4-pulseaudio-plugin'
+		'xfce4-screensaver'
+		'xfce4-screenshooter'
+		'xfce4-sensors-plugin'
+		'xfce4-systemload-plugin'
+		'xfce4-taskmanager'
+		'xfce4-whiskermenu-plugin'
+	)
 }
