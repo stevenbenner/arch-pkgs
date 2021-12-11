@@ -24,16 +24,55 @@ package_system-config-base() {
 	install='system-config-base.install'
 
 	# base packages
-	depends=('base' 'linux' 'linux-firmware' 'lvm2' 'man-db' 'man-pages' 'pacman-contrib' 'reflector')
+	depends=(
+		'base'                      # arch linux base metapackage
+		'linux'                     # standard kernel
+		'linux-firmware'            # hardware firmware/drivers
+		'lvm2'                      # lvm support
+		'man-db'                    # man support
+		'man-pages'                 # man support
+		'pacman-contrib'            # pacman utilities, including paccache
+		'reflector'                 # automatic arch mirror configuration tool
+	)
 
 	# base-devel packages
-	depends+=('autoconf' 'automake' 'bison' 'gcc' 'highlight' 'make' 'patch' 'pkgconf' 'texinfo' 'which')
+	depends+=(
+		'autoconf'                  # software build tool
+		'automake'                  # software build tool
+		'bison'                     # software build tool
+		'gcc'                       # software build tool
+		'highlight'                 # cli code highlighter, used by trizen
+		'make'                      # software build tool
+		'patch'                     # patch create/apply tool
+		'pkgconf'                   # software build tool
+		'texinfo'                   # software documentation generator
+		'which'                     # system utility to find program location
+	)
 
 	# system packages
-	depends+=('iptables' 'logrotate' 'nfs-utils' 'sudo' 'zsh' 'zsh-syntax-highlighting')
+	depends+=(
+		'iptables'                  # firewall
+		'logrotate'                 # log file manager
+		'nfs-utils'                 # nfs support
+		'sudo'                      # sudo
+		'zsh'                       # zsh
+		'zsh-syntax-highlighting'   # console syntax highlighting
+	)
 
 	# universal software
-	depends+=('colordiff' 'git' 'htop' 'less' 'nano' 'nmap' 'pkgstats' 'screenfetch' 'stow' 'tree' 'wget')
+	depends+=(
+		'colordiff'                 # diff command with syntax highlighting, used by dotfiles
+		'git'                       # version control software, used for dotfiles and aur
+		'htop'                      # improved version of top
+		'less'                      # cli text viewer
+		'nano'                      # cli text editor
+		'nmap'                      # network diagnostics tool
+		'pkgstats'                  # send installed packages and basic system info for statistics
+		'screenfetch'               # system information utility
+		'stow'                      # symlink utility, used for dotfiles
+		'tree'                      # directory list tool
+		'wget'                      # cli download utility
+	)
 
 	# microcode
 	optdepends=(
@@ -51,19 +90,25 @@ package_system-config-desktop() {
 	pkgdesc='Desktop system configuration'
 
 	# standard software
-	depends=('chromium' 'firefox' 'keepassxc' 'mpv' 'vlc')
+	depends=(
+		'chromium'                  # web browser
+		'firefox'                   # web browser
+		'keepassxc'                 # password manager
+		'mpv'                       # video playback software
+		'vlc'                       # video playback software
+	)
 
 	# fonts
 	depends+=(
-		'adobe-source-code-pro-fonts'
-		'gnu-free-fonts'
-		'otf-ipafont'
-		'ttf-anonymous-pro'
-		'ttf-bitstream-vera'
-		'ttf-droid'
-		'ttf-inconsolata'
-		'ttf-liberation'
-		'ttf-roboto'
+		'adobe-source-code-pro-fonts'  # monospace font designed for source code
+		'gnu-free-fonts'            # commonly used collection of free fonts
+		'otf-ipafont'               # japanese language font
+		'ttf-anonymous-pro'         # monospace font designed for source code
+		'ttf-bitstream-vera'        # commonly used collection of fonts
+		'ttf-droid'                 # android fonts
+		'ttf-inconsolata'           # monospace font designed for code and terminal
+		'ttf-liberation'            # free fonts similar to older windows fonts
+		'ttf-roboto'                # google fonts
 	)
 
 	# graphics drivers
@@ -82,46 +127,51 @@ package_system-config-gnome() {
 	depends=('system-config-desktop')
 
 	# supporting packages
-	depends+=('networkmanager')
+	depends+=(
+		'networkmanager'            # networking config/manager service
+	)
 
 	# gnome group packages
 	depends+=(
-		'eog'
-		'gdm'
-		'gedit'
-		'gnome-backgrounds'
-		'gnome-calculator'
-		'gnome-calendar'
-		'gnome-characters'
-		'gnome-clocks'
-		'gnome-color-manager'
-		'gnome-control-center'
-		'gnome-disk-utility'
-		'gnome-font-viewer'
-		'gnome-keyring'
-		'gnome-logs'
-		'gnome-menus'
-		'gnome-screenshot'
-		'gnome-session'
-		'gnome-settings-daemon'
-		'gnome-shell'
-		'gnome-shell-extensions'
-		'gnome-system-monitor'
-		'gnome-terminal'
-		'gnome-themes-extra'
-		'gnome-user-docs'
-		'gnome-weather'
-		'gvfs'
-		'gvfs-nfs'
-		'gvfs-smb'
-		'mutter'
-		'nautilus'
-		'sushi'
-		'xdg-user-dirs-gtk'
+		'eog'                       # image viewer
+		'gdm'                       # gnome display manager
+		'gedit'                     # text editor
+		'gnome-backgrounds'         # small collection of background images
+		'gnome-calculator'          # calculator
+		'gnome-calendar'            # calendar
+		'gnome-characters'          # character map viewer
+		'gnome-clocks'              # clock
+		'gnome-color-manager'       # color profile utility
+		'gnome-control-center'      # gnome settings tool
+		'gnome-disk-utility'        # drive/partition viewer
+		'gnome-font-viewer'         # font viewer
+		'gnome-keyring'             # key ring
+		'gnome-logs'                # log viewer
+		'gnome-menus'               # gnome's menu system
+		'gnome-screenshot'          # screenshot tool
+		'gnome-session'             # session manager
+		'gnome-settings-daemon'     # settings back-end
+		'gnome-shell'               # gnome desktop functionality
+		'gnome-shell-extensions'    # cli gnome extensions manager
+		'gnome-system-monitor'      # system monitor utility
+		'gnome-terminal'            # terminal
+		'gnome-themes-extra'        # gnome themes
+		'gnome-user-docs'           # gnome documentation
+		'gnome-weather'             # weather app
+		'gvfs'                      # virtual filesystem tool
+		'gvfs-nfs'                  # nfs support for gvfs
+		'gvfs-smb'                  # samba support for gvfs
+		'mutter'                    # window manager
+		'nautilus'                  # file browser
+		'sushi'                     # nautilus file previewer
+		'xdg-user-dirs-gtk'         # creates xdg user directories
 	)
 
 	# gnome-extra group packages
-	depends+=('gnome-tweaks' 'gnome-usage')
+	depends+=(
+		'gnome-tweaks'              # extra settings manager
+		'gnome-usage'               # system monitor utility
+	)
 }
 
 package_system-config-xfce() {
@@ -132,47 +182,53 @@ package_system-config-xfce() {
 	depends=('system-config-desktop')
 
 	# supporting packages
-	depends+=('light-locker' 'lightdm' 'lightdm-gtk-greeter' 'xcape' 'xorg-xinput')
+	depends+=(
+		'light-locker'              # session locker for lightdm
+		'lightdm'                   # display manager
+		'lightdm-gtk-greeter'       # default greeter (login screen) for lightdm
+		'xcape'                     # key mapping tool, used for super key support in dotfiles
+		'xorg-xinput'               # input device config tool, used to set mouse acceleration
+	)
 
 	# xfce group packages
 	depends+=(
-		'thunar'
-		'thunar-volman'
-		'xfce4-appfinder'
-		'xfce4-panel'
-		'xfce4-power-manager'
-		'xfce4-session'
-		'xfce4-settings'
-		'xfce4-terminal'
-		'xfdesktop'
-		'xfwm4'
-		'xfwm4-themes'
+		'thunar'                    # file browser
+		'thunar-volman'             # mounting utility for thunar
+		'xfce4-appfinder'           # application finder utility
+		'xfce4-panel'               # panel support
+		'xfce4-power-manager'       # power settings tool
+		'xfce4-session'             # session manager
+		'xfce4-settings'            # settings manager
+		'xfce4-terminal'            # terminal
+		'xfdesktop'                 # desktop manager
+		'xfwm4'                     # window manager
+		'xfwm4-themes'              # default themes
 	)
 
 	# xfce-goodies group packages
 	depends+=(
-		'mousepad'
-		'ristretto'
-		'thunar-archive-plugin'
-		'thunar-media-tags-plugin'
-		'xfburn'
-		'xfce4-artwork'
-		'xfce4-clipman-plugin'
-		'xfce4-cpufreq-plugin'
-		'xfce4-cpugraph-plugin'
-		'xfce4-datetime-plugin'
-		'xfce4-diskperf-plugin'
-		'xfce4-fsguard-plugin'
-		'xfce4-mount-plugin'
-		'xfce4-netload-plugin'
-		'xfce4-notes-plugin'
-		'xfce4-notifyd'
-		'xfce4-pulseaudio-plugin'
-		'xfce4-screensaver'
-		'xfce4-screenshooter'
-		'xfce4-sensors-plugin'
-		'xfce4-systemload-plugin'
-		'xfce4-taskmanager'
-		'xfce4-whiskermenu-plugin'
+		'mousepad'                  # text editor
+		'ristretto'                 # image viewer
+		'thunar-archive-plugin'     # zip/tar/etc support for thunar
+		'thunar-media-tags-plugin'  # media tags support for thunar
+		'xfburn'                    # cd/dvd burning software
+		'xfce4-artwork'             # backgrounds
+		'xfce4-clipman-plugin'      # clipboard manager widget
+		'xfce4-cpufreq-plugin'      # cpu status widget
+		'xfce4-cpugraph-plugin'     # cpu status widget
+		'xfce4-datetime-plugin'     # date/time widget
+		'xfce4-diskperf-plugin'     # hdd status widget
+		'xfce4-fsguard-plugin'      # file system monitor widget
+		'xfce4-mount-plugin'        # file system mounting widget
+		'xfce4-netload-plugin'      # network status widget
+		'xfce4-notes-plugin'        # note widget
+		'xfce4-notifyd'             # notification support
+		'xfce4-pulseaudio-plugin'   # pulse audio widget
+		'xfce4-screensaver'         # screensaver
+		'xfce4-screenshooter'       # screenshot tool
+		'xfce4-sensors-plugin'      # sensors widget
+		'xfce4-systemload-plugin'   # system monitor widget
+		'xfce4-taskmanager'         # task manager
+		'xfce4-whiskermenu-plugin'  # enhanced "start" menu
 	)
 }
