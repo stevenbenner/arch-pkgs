@@ -81,9 +81,11 @@ package_system-config-base() {
 	)
 
 	install -Dm0644 etc-locale.conf "$pkgdir/etc/locale.conf"
-	install -Dm0600 sudo-wheel "$pkgdir/etc/sudoers.d/wheel"
+	install -Dm0440 sudo-wheel "$pkgdir/etc/sudoers.d/wheel"
 	install -Dm0644 paccache.hook "$pkgdir/usr/share/libalpm/hooks/paccache.hook"
 	install -Dm0644 mirrorupgrade.hook "$pkgdir/usr/share/libalpm/hooks/mirrorupgrade.hook"
+
+	chmod 750 "$pkgdir/etc/sudoers.d/"
 }
 
 package_system-config-desktop() {
