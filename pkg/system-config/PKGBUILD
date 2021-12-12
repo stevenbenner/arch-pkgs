@@ -66,6 +66,7 @@ package_system-config-base() {
 		'htop'                      # improved version of top
 		'less'                      # cli text viewer
 		'nano'                      # cli text editor
+		'nano-syntax-highlighting'  # extra nano syntax highlighting, used by dotfiles
 		'nmap'                      # network diagnostics tool
 		'pkgstats'                  # send installed packages and basic system info for statistics
 		'screenfetch'               # system information utility
