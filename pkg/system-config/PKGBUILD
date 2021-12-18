@@ -65,6 +65,7 @@ package_system-config-base() {
 		'git'                       # version control software, used for dotfiles and aur
 		'htop'                      # improved version of top
 		'less'                      # cli text viewer
+		'lostfiles'                 # tool to find system files not being managed by pacman
 		'nano'                      # cli text editor
 		'nano-syntax-highlighting'  # extra nano syntax highlighting, used by dotfiles
 		'nmap'                      # network diagnostics tool
