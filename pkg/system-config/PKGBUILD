@@ -101,6 +101,7 @@ package_system-config-desktop() {
 		'keepassxc'                 # password manager
 		'mpv'                       # video playback software
 		'vlc'                       # video playback software
+		'yt-dlp'                    # cli video downloader, support youtube (and others) in mpv
 	)
 
 	# fonts
