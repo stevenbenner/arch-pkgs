@@ -224,7 +224,6 @@ package_system-config-xfce() {
 		'xfce4-datetime-plugin'     # date/time widget
 		'xfce4-diskperf-plugin'     # hdd status widget
 		'xfce4-fsguard-plugin'      # file system monitor widget
-		'xfce4-mount-plugin'        # file system mounting widget
 		'xfce4-netload-plugin'      # network status widget
 		'xfce4-notes-plugin'        # note widget
 		'xfce4-notifyd'             # notification support
