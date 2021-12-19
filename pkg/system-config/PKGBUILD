@@ -218,7 +218,6 @@ package_system-config-xfce() {
 		'thunar-archive-plugin'     # zip/tar/etc support for thunar
 		'thunar-media-tags-plugin'  # media tags support for thunar
 		'xfce4-artwork'             # backgrounds
-		'xfce4-clipman-plugin'      # clipboard manager widget
 		'xfce4-cpufreq-plugin'      # cpu status widget
 		'xfce4-cpugraph-plugin'     # cpu status widget
 		'xfce4-datetime-plugin'     # date/time widget
