@@ -1,5 +1,11 @@
 pkgbase=system-config
-pkgname=('system-config-base' 'system-config-desktop' 'system-config-gnome' 'system-config-xfce')
+pkgname=(
+	'system-config-base'
+	'system-config-desktop'
+	'system-config-devel'
+	'system-config-gnome'
+	'system-config-xfce'
+)
 pkgver=6
 pkgrel=1
 pkgdesc='Arch Linux system configuration'
@@ -124,6 +130,26 @@ package_system-config-desktop() {
 		'mesa: AMD graphics support'
 		'nvidia: Nvidia graphics support'
 		'xf86-video-intel: Intel graphics support on Xorg'
+	)
+}
+
+package_system-config-devel() {
+	pkgdesc='Development system configuration'
+
+	# inherit common desktop config
+	depends=('system-config-desktop')
+
+	# dev software
+	depends+=(
+		'filezilla'                 # ftp/ftps/sftp client
+		'gdb'                       # debugging tool
+		'grunt-cli'                 # javascript task runner
+		'meld'                      # visual diff and merge tool
+		'namcap'                    # pacman package analyzer
+		'npm'                       # node.js package manager
+		'rsync'                     # remote file copying tool
+		'rust'                      # rust language compiler/utilities
+		'shellcheck'                # shell script analysis tool
 	)
 }
 
