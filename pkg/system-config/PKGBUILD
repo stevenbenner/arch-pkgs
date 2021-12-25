@@ -73,6 +73,7 @@ package_system-config-base() {
 		'screenfetch'               # system information utility
 		'stow'                      # symlink utility, used for dotfiles
 		'tree'                      # directory list tool
+		'unrar'                     # extract rar files
 		'unzip'                     # extract zip files
 		'usbutils'                  # lsusb command
 		'wget'                      # cli download utility
