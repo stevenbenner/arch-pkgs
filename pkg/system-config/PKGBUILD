@@ -102,8 +102,11 @@ package_system-config-base() {
 package_system-config-desktop() {
 	pkgdesc='Desktop system configuration'
 
+	# inherit base config
+	depends=('system-config-base')
+
 	# standard software
-	depends=(
+	depends+=(
 		'chromium'                  # web browser
 		'firefox'                   # web browser
 		'keepassxc'                 # password manager
