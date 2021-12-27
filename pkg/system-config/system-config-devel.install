@@ -1,0 +1,13 @@
+_pacman_add_sublime() {
+	if ! grep -Fxqe '[sublime-text]' /etc/pacman.conf; then
+		{
+			echo ''
+			echo '[sublime-text]'
+			echo 'Server = https://download.sublimetext.com/arch/stable/x86_64'
+		} >> /etc/pacman.conf
+	fi
+}
+
+post_install() {
+	_pacman_add_sublime
+}

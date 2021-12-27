@@ -135,6 +135,7 @@ package_system-config-desktop() {
 
 package_system-config-devel() {
 	pkgdesc='Development system configuration'
+	install='system-config-devel.install'
 
 	# inherit common desktop config
 	depends=('system-config-desktop')
