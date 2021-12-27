@@ -115,6 +115,11 @@ package_system-config-desktop() {
 		'yt-dlp'                    # cli video downloader, support youtube (and others) in mpv
 	)
 
+	# system packages
+	depends+=(
+		'pulseaudio'                # system sound server
+	)
+
 	# fonts
 	depends+=(
 		'adobe-source-code-pro-fonts'  # monospace font designed for source code
