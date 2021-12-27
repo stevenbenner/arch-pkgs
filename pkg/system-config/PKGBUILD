@@ -6,7 +6,7 @@ pkgname=(
 	'system-config-gnome'
 	'system-config-xfce'
 )
-pkgver=6
+pkgver=7
 pkgrel=1
 pkgdesc='Arch Linux system configuration'
 arch=('any')
