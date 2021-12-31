@@ -61,6 +61,7 @@ package_system-config-base() {
 		'iptables'                  # firewall
 		'logrotate'                 # log file manager
 		'nfs-utils'                 # nfs support
+		'smartmontools'             # storage device s.m.a.r.t. tools
 		'zsh'                       # zsh
 		'zsh-syntax-highlighting'   # console syntax highlighting
 	)
