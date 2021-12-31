@@ -83,6 +83,7 @@ package_system-config-base() {
 		'unzip'                     # extract zip files
 		'usbutils'                  # lsusb command
 		'wget'                      # cli download utility
+		'zip'                       # create zip files
 	)
 
 	# microcode
