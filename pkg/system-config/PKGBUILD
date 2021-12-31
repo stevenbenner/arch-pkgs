@@ -75,6 +75,7 @@ package_system-config-base() {
 		'nano'                      # cli text editor
 		'nano-syntax-highlighting'  # extra nano syntax highlighting, used by dotfiles
 		'nmap'                      # network diagnostics tool
+		'p7zip'                     # 7z file tool
 		'pkgstats'                  # send installed packages and basic system info for statistics
 		'screenfetch'               # system information utility
 		'stow'                      # symlink utility, used for dotfiles
