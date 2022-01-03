@@ -32,7 +32,6 @@ EOF
 }
 
 post_install() {
-	_set_iptables_rules
 	post_upgrade
 }
 
@@ -52,4 +51,8 @@ post_upgrade() {
 
 	# reflector.conf
 	_set_reflector_config
+
+	# iptables
+	_set_iptables_rules
+	systemctl enable --now iptables.service
 }
