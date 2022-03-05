@@ -276,4 +276,9 @@ package_system-config-xfce() {
 		'xfce4-taskmanager'         # task manager
 		'xfce4-whiskermenu-plugin'  # enhanced "start" menu
 	)
+
+	# useful software packages
+	depends+=(
+		'xarchiver'                 # file archive tool
+	)
 }
