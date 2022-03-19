@@ -279,6 +279,7 @@ package_system-config-xfce() {
 
 	# useful software packages
 	depends+=(
+		'mate-calc'                 # simple calculator
 		'xarchiver'                 # file archive tool
 	)
 }
