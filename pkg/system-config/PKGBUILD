@@ -165,6 +165,7 @@ package_system-config-devel() {
 		'rsync'                     # remote file copying tool
 		'rust'                      # rust language compiler/utilities
 		'shellcheck'                # shell script analysis tool
+		'strace'                    # system trace/diagnostics tool
 		'valgrind'                  # memory leak finder
 	)
 }
