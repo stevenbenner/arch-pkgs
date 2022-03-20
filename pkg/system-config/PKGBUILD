@@ -166,6 +166,7 @@ package_system-config-devel() {
 		'rust'                      # rust language compiler/utilities
 		'shellcheck'                # shell script analysis tool
 		'strace'                    # system trace/diagnostics tool
+		'strip-nondeterminism'      # deterministic archive tool
 		'valgrind'                  # memory leak finder
 	)
 }
