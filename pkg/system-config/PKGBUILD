@@ -1,3 +1,5 @@
+# Maintainer: Steven Benner
+
 pkgbase=system-config
 pkgname=(
 	'system-config-base'
