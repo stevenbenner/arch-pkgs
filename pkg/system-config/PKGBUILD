@@ -4,6 +4,7 @@ pkgname=(
 	'system-config-desktop'
 	'system-config-devel'
 	'system-config-gnome'
+	'system-config-workstation'
 	'system-config-xfce'
 )
 pkgver=9
@@ -223,6 +224,28 @@ package_system-config-gnome() {
 	depends+=(
 		'gnome-tweaks'              # extra settings manager
 		'gnome-usage'               # system monitor utility
+	)
+}
+
+package_system-config-workstation() {
+	pkgdesc='Workstation system configuration'
+
+	# inherit common desktop config
+	depends=('system-config-desktop')
+
+	# software
+	depends+=(
+		'clementine'                # music player
+		'gimp'                      # image editor
+		'hexchat'                   # irc client
+		'inkscape'                  # vector graphics editor
+		'libreoffice-fresh'         # libreoffice
+		'openvpn'                   # vpn client
+		'pidgin'                    # instant messaging client
+		'pidgin-otr'                # otr messaging plugin for pidgin
+		'thunderbird'               # email and rss client
+		'virtualbox'                # virtual machines
+		'virtualbox-guest-iso'      # guest drivers for virtualbox
 	)
 }
 
