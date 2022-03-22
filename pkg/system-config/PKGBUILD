@@ -5,6 +5,7 @@ pkgname=(
 	'system-config-base'
 	'system-config-desktop'
 	'system-config-devel'
+	'system-config-linksys'
 	'system-config-gnome'
 	'system-config-workstation'
 	'system-config-xfce'
@@ -226,6 +227,22 @@ package_system-config-gnome() {
 	depends+=(
 		'gnome-tweaks'              # extra settings manager
 		'gnome-usage'               # system monitor utility
+	)
+}
+
+package_system-config-linksys() {
+	pkgdesc='Linksys development system configuration'
+
+	# inherit development config
+	depends=('system-config-devel')
+
+	# packages
+	depends+=(
+		'inetutils'                 # for tftp
+		'minicom'                   # serial communication tool
+		'openconnect'               # cisco vpn
+		'python2'                   # old python scripts support
+		'wireshark-qt'              # network traffic analyzer/recorder
 	)
 }
 
