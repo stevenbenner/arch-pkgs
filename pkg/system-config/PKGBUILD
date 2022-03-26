@@ -254,6 +254,7 @@ package_system-config-workstation() {
 
 	# software
 	depends+=(
+		'aspell'                    # pidgin spell checking
 		'clementine'                # music player
 		'gimp'                      # image editor
 		'hexchat'                   # irc client
