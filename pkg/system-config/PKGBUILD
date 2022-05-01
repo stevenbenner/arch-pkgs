@@ -208,7 +208,6 @@ package_system-config-gnome() {
 		'gnome-session'             # session manager
 		'gnome-settings-daemon'     # settings back-end
 		'gnome-shell'               # gnome desktop functionality
-		'gnome-shell-extensions'    # cli gnome extensions manager
 		'gnome-system-monitor'      # system monitor utility
 		'gnome-terminal'            # terminal
 		'gnome-themes-extra'        # gnome themes
