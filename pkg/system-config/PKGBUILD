@@ -215,7 +215,6 @@ package_system-config-gnome() {
 		'gnome-weather'             # weather app
 		'gvfs'                      # virtual filesystem tool
 		'gvfs-nfs'                  # nfs support for gvfs
-		'gvfs-smb'                  # samba support for gvfs
 		'mutter'                    # window manager
 		'nautilus'                  # file browser
 		'sushi'                     # nautilus file previewer
