@@ -212,7 +212,6 @@ package_system-config-gnome() {
 		'gnome-terminal'            # terminal
 		'gnome-themes-extra'        # gnome themes
 		'gnome-user-docs'           # gnome documentation
-		'gnome-weather'             # weather app
 		'gvfs'                      # virtual filesystem tool
 		'gvfs-nfs'                  # nfs support for gvfs
 		'mutter'                    # window manager
