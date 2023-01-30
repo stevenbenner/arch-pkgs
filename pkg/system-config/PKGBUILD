@@ -238,7 +238,6 @@ package_system-config-linksys() {
 		'inetutils'                 # for tftp
 		'minicom'                   # serial communication tool
 		'openconnect'               # cisco vpn
-		'python2'                   # old python scripts support
 		'wireshark-qt'              # network traffic analyzer/recorder
 	)
 }
