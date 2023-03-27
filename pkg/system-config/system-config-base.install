@@ -55,4 +55,7 @@ post_upgrade() {
 	# iptables
 	_set_iptables_rules
 	systemctl enable iptables.service
+
+	# systemd-boot-update
+	systemctl enable systemd-boot-update.service
 }
