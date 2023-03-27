@@ -19,12 +19,14 @@ license=('none')
 source=(
 	'etc-locale.conf'
 	'sudo-wheel'
+	'ssh_known_hosts'
 	'paccache.hook'
 	'mirrorupgrade.hook'
 )
 sha256sums=(
 	'033252d5100cbb0028d7c15e075f63e4eb5ff7f1a923cd5cb547bcfd6b024f5b'
 	'9db7f67e68218e51ee549cba0949aae86b6c14a48ac40b851cf76aba951f70a7'
+	'7365424a09fde1acd6f8e5c17399a9fa22cb87f791bddc62ffe9e52d2d2dbf16'
 	'ac76047ee7b0c57b225503f5d75cbdd70566e357f306ea5864688dc668aeac0a'
 	'76ac369fd16b74ed4c617fea03fd37d8b47fb181e5c165873dbbfa852ad3f867'
 )
@@ -102,6 +104,7 @@ package_system-config-base() {
 
 	install -Dm0644 etc-locale.conf "$pkgdir/etc/locale.conf"
 	install -Dm0440 sudo-wheel "$pkgdir/etc/sudoers.d/wheel"
+	install -Dm0644 ssh_known_hosts "$pkgdir/etc/ssh/ssh_known_hosts"
 	install -Dm0644 paccache.hook "$pkgdir/usr/share/libalpm/hooks/paccache.hook"
 	install -Dm0644 mirrorupgrade.hook "$pkgdir/usr/share/libalpm/hooks/mirrorupgrade.hook"
 
