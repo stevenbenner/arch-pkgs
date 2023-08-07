@@ -197,7 +197,6 @@ package_system-config-gnome() {
 		'gedit'                     # text editor
 		'gnome-backgrounds'         # small collection of background images
 		'gnome-calculator'          # calculator
-		'gnome-calendar'            # calendar
 		'gnome-characters'          # character map viewer
 		'gnome-clocks'              # clock
 		'gnome-color-manager'       # color profile utility
