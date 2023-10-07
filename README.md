@@ -48,6 +48,54 @@ Server = http://serverhostname/repo
 * Replace "private" with the `TARGET_REPO` specified in the makefile
 * Replace "serverhostname" with the real host name or IP address of the server hosting the repo folder.
 
+### Install the packages on the client systems
+
+You can now install the desired system configuration meta packages with pacman.
+
+For example, on my [Xfce][xfce] workstation I will install the needed packages with the following command:
+
+```
+sudo pacman -S system-config-devel system-config-workstation system-config-xfce
+```
+
+Or on my [GNOME][gnome] laptop, I would install this instead:
+
+```
+sudo pacman -S system-config-gnome
+```
+
+It would be best to install these when first setting up the system (I do this during the `arch-chroot` installation step). However, they can be installed at any time after the system is set up.
+
+You may need to clean up a couple .pacnew files, so pay attention to notices during installation.
+
+#### Set dependency install reason
+
+After installing the system config meta packages you may want to set the install reason of the dependencies. This step isn't strictly necessary, however it makes the package tracking in pacman more accurate so that maintenance will be done correctly, as well as makes browsing the installed packages much nicer in the future.
+
+##### During Arch installation
+
+If you are installing this on a brand new Arch Linux installation then the `pacstrap` command you ran will explicitly install three packages that the system config meta packages depend on. So you can set their install reason to "asdeps" with this command:
+
+```
+sudo pacman -D --asdeps base linux linux-firmware
+```
+
+##### After Arch installation
+
+If you are installing this on an already configured system then I recommend that you have pacman set all of the meta package dependencies install reason to "asdeps". This is to ensure that future changes to your system config meta packages will allow you to clean up unused packages on your computers.
+
+For example, if you installed the `system-config-xfce` package then you can set all of it's dependencies to "asdeps" with the following command:
+
+```
+sudo pacman -D --asdeps $(pactree -u system-config-xfce)
+```
+
+Now if you change or remove a dependency in the system config then any leftover packages will be marked as orphans that can be uninstalled when performing regular [system maintenance][sysmaint].
+
+[xfce]: https://www.xfce.org/
+[gnome]: http://www.gnome.org/
+[sysmaint]: https://wiki.archlinux.org/title/System_maintenance
+
 ## Resources
 
 Special thanks to the Arch Linux enthusiasts who published articles and code explaining how to accomplish this. Here are some particularly useful links for anyone wanting to make something like this.
