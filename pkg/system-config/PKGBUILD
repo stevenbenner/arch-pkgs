@@ -219,6 +219,7 @@ package_system-config-gnome() {
 		'mutter'                    # window manager
 		'nautilus'                  # file browser
 		'sushi'                     # nautilus file previewer
+		'xdg-desktop-portal-gnome'  # xdg-desktop-portal for gnome
 		'xdg-user-dirs-gtk'         # creates xdg user directories
 	)
 
