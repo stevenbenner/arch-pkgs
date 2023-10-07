@@ -13,7 +13,7 @@ The purpose of this project is to simplify the process of setting up and maintai
 > **Note**\
 > I would recommend that you use this project for inspiration or fork it as a template for your own custom setup. You probably do not want to install these packages as-is because they will be specific to my usage in places (e.g. US-English, US-pacific time zone).
 
-### Building the packages
+### Build the packages
 
 The makefile includes some basic operations:
 
@@ -26,7 +26,7 @@ The packages are built with [`makepkg`][makepkg]. This method includes some info
 [makepkg]: https://wiki.archlinux.org/title/makepkg
 [cleanchroot]: https://wiki.archlinux.org/title/DeveloperWiki:Building_in_a_clean_chroot
 
-### Publishing the packages
+### Publish the packages
 
 The "repo" folder will contain everything you need to host the [package repository][customrepo]. Serve this folder on your local network to make the repo available to all computers on the LAN.
 
