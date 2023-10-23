@@ -81,6 +81,7 @@ package_system-config-base() {
 		'lostfiles'                 # tool to find system files not being managed by pacman
 		'nano'                      # cli text editor
 		'nano-syntax-highlighting'  # extra nano syntax highlighting, used by dotfiles
+		'nethogs'                   # network interface usage tool
 		'nmap'                      # network diagnostics tool
 		'p7zip'                     # 7z file tool
 		'pkgstats'                  # send installed packages and basic system info for statistics
