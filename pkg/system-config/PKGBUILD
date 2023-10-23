@@ -226,6 +226,7 @@ package_system-config-gnome() {
 
 	# gnome-extra group packages
 	depends+=(
+		'file-roller'               # file archive tool
 		'gnome-tweaks'              # extra settings manager
 		'gnome-usage'               # system monitor utility
 	)
