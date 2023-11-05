@@ -86,7 +86,6 @@ package_system-config-base() {
 		'pkgstats'                  # send installed packages and basic system info for statistics
 		'screenfetch'               # system information utility
 		'stow'                      # symlink utility, used for dotfiles
-		'tmux'                      # terminal multiplexer
 		'traceroute'                # network diagnostics tool
 		'tree'                      # directory list tool
 		'unrar'                     # extract rar files
