@@ -24,8 +24,8 @@ system-config:
 .PHONY: check
 check:
 	@echo "Running shellcheck on files..."
-	shellcheck -e SC2034 -e SC2148 -e SC2154 pkg/**/PKGBUILD
-	shellcheck -e SC2148 pkg/**/*.install
+	shellcheck --shell=bash --exclude=SC2034,SC2154 pkg/**/PKGBUILD
+	shellcheck --shell=bash pkg/**/*.install
 	@echo "Running namcap on files..."
 	namcap -ie splitpkgmakedeps pkg/**/PKGBUILD
 
