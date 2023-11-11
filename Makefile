@@ -13,7 +13,7 @@ endif
 
 $(REPO_DIR): system-config
 	@echo "Updating $(TARGET_REPO) package repo..."
-	mkdir -p $@
+	mkdir --parents $@
 	repo-add $(REPO_DIR)/$(TARGET_REPO).db.tar.gz pkg/**/*.pkg.tar.zst
 	cp pkg/**/*.pkg.tar.zst $@
 
@@ -27,9 +27,9 @@ check:
 	shellcheck --shell=bash --exclude=SC2034,SC2154 pkg/**/PKGBUILD
 	shellcheck --shell=bash pkg/**/*.install
 	@echo "Running namcap on files..."
-	namcap -ie splitpkgmakedeps pkg/**/PKGBUILD
+	namcap --info --exclude=splitpkgmakedeps pkg/**/PKGBUILD
 
 .PHONY: clean
 clean:
 	@echo "Removing build artifacts..."
-	rm -rfv pkg/**/{pkg,src,*.pkg.tar.zst,*.pkg.tar.zst.sig}
+	rm --recursive --force --verbose pkg/**/{pkg,src,*.pkg.tar.zst,*.pkg.tar.zst.sig}
