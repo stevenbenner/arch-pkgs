@@ -6,6 +6,7 @@ pkgname=(
 	'system-config-desktop'
 	'system-config-devel'
 	'system-config-gnome'
+	'system-config-nvidia'
 	'system-config-workstation'
 	'system-config-xfce'
 )
@@ -147,7 +148,7 @@ package_system-config-desktop() {
 	# graphics drivers
 	optdepends=(
 		'mesa: AMD graphics support'
-		'nvidia: Nvidia graphics support'
+		'system-config-nvidia: Nvidia graphics support'
 		'xf86-video-intel: Intel graphics support on Xorg'
 	)
 }
@@ -227,6 +228,20 @@ package_system-config-gnome() {
 		'file-roller'               # file archive tool
 		'gnome-tweaks'              # extra settings manager
 		'gnome-usage'               # system monitor utility
+	)
+}
+
+package_system-config-nvidia() {
+	pkgdesc='Nvidia graphics system configuration'
+
+	# inherit base config
+	depends=('system-config-base')
+
+	# packages
+	depends+=(
+		'libva-mesa-driver'         # va-api drivers
+		'nvidia'                    # nvidia drivers
+		'nvidia-settings'           # nvidia configuration utility
 	)
 }
 
