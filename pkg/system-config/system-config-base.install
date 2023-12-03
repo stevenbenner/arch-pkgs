@@ -1,33 +1,33 @@
 _set_iptables_rules() {
-	cat > /etc/iptables/iptables.rules <<EOF
-*filter
-:INPUT DROP [0:0]
-:FORWARD DROP [0:0]
-:OUTPUT ACCEPT [14:2023]
-:TCP - [0:0]
-:UDP - [0:0]
--A INPUT -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
--A INPUT -i lo -j ACCEPT
--A INPUT -m conntrack --ctstate INVALID -j DROP
--A INPUT -p icmp -m icmp --icmp-type 8 -m conntrack --ctstate NEW -j ACCEPT
--A INPUT -p udp -m conntrack --ctstate NEW -j UDP
--A INPUT -p tcp -m tcp --tcp-flags FIN,SYN,RST,ACK SYN -m conntrack --ctstate NEW -j TCP
--A INPUT -p udp -j REJECT --reject-with icmp-port-unreachable
--A INPUT -p tcp -j REJECT --reject-with tcp-reset
--A INPUT -j REJECT --reject-with icmp-proto-unreachable
-COMMIT
+	cat > /etc/iptables/iptables.rules <<- EOF
+		*filter
+		:INPUT DROP [0:0]
+		:FORWARD DROP [0:0]
+		:OUTPUT ACCEPT [14:2023]
+		:TCP - [0:0]
+		:UDP - [0:0]
+		-A INPUT -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
+		-A INPUT -i lo -j ACCEPT
+		-A INPUT -m conntrack --ctstate INVALID -j DROP
+		-A INPUT -p icmp -m icmp --icmp-type 8 -m conntrack --ctstate NEW -j ACCEPT
+		-A INPUT -p udp -m conntrack --ctstate NEW -j UDP
+		-A INPUT -p tcp -m tcp --tcp-flags FIN,SYN,RST,ACK SYN -m conntrack --ctstate NEW -j TCP
+		-A INPUT -p udp -j REJECT --reject-with icmp-port-unreachable
+		-A INPUT -p tcp -j REJECT --reject-with tcp-reset
+		-A INPUT -j REJECT --reject-with icmp-proto-unreachable
+		COMMIT
 EOF
 }
 
 _set_reflector_config() {
-	cat > /etc/xdg/reflector/reflector.conf <<EOF
-# Reflector configuration file for the systemd service.
---save /etc/pacman.d/mirrorlist
---protocol https
---age 12
---country US
---sort rate
---number 10
+	cat > /etc/xdg/reflector/reflector.conf <<- EOF
+		# Reflector configuration file for the systemd service.
+		--save /etc/pacman.d/mirrorlist
+		--protocol https
+		--age 12
+		--country US
+		--sort rate
+		--number 10
 EOF
 }
 
