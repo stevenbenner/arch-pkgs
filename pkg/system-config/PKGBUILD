@@ -186,8 +186,9 @@ package_system-config-gnome() {
 
 	# supporting packages
 	depends+=(
-		'networkmanager'            # networking config/manager service
 		'gnome-browser-connector'   # chromium support for extensions.gnome.org
+		'networkmanager'            # networking config/manager service
+		'power-profiles-daemon'     # power profile support
 	)
 
 	# gnome group packages
