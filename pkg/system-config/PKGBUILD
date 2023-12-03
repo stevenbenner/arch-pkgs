@@ -193,6 +193,7 @@ package_system-config-gnome() {
 
 	# gnome group packages
 	depends+=(
+		'baobab'                    # directory tree analyzer
 		'eog'                       # image viewer
 		'gdm'                       # gnome display manager
 		'gedit'                     # text editor
