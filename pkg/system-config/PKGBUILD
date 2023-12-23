@@ -137,6 +137,7 @@ package_system-config-desktop() {
 	depends+=(
 		'adobe-source-code-pro-fonts'  # monospace font designed for source code
 		'gnu-free-fonts'            # commonly used collection of free fonts
+		'noto-fonts-emoji'          # emoji font for chromium
 		'otf-ipafont'               # japanese language font
 		'ttf-anonymous-pro'         # monospace font designed for source code
 		'ttf-bitstream-vera'        # commonly used collection of fonts
