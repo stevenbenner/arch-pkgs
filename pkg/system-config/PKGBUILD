@@ -77,6 +77,7 @@ package_system-config-base() {
 		'colordiff'                 # diff command with syntax highlighting, used by dotfiles
 		'git'                       # version control software, used for dotfiles and aur
 		'htop'                      # improved version of top
+		'iftop'                     # network interface usage tool
 		'less'                      # cli text viewer
 		'lostfiles'                 # tool to find system files not being managed by pacman
 		'nano'                      # cli text editor
