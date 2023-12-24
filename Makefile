@@ -15,6 +15,9 @@ $(REPO_DIR): system-config
 	@echo "Updating $(TARGET_REPO) package repo..."
 	mkdir --parents $@
 	repo-add $(REPO_DIR)/$(TARGET_REPO).db.tar.gz pkg/**/*.pkg.tar.zst
+	rm --force --verbose $(REPO_DIR)/$(TARGET_REPO).{db,files}
+	cp $(REPO_DIR)/$(TARGET_REPO).db.tar.gz $(REPO_DIR)/$(TARGET_REPO).db
+	cp $(REPO_DIR)/$(TARGET_REPO).files.tar.gz $(REPO_DIR)/$(TARGET_REPO).files
 	cp pkg/**/*.pkg.tar.zst $@
 
 system-config:
