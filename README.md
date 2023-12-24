@@ -30,7 +30,7 @@ The packages are built with [`makepkg`][makepkg]. This method includes some info
 
 The "repo" folder will contain everything you need to host the [package repository][customrepo]. Serve this folder on your local network to make the repo available to all computers on the LAN.
 
-I recommend that you sync the folder to a dedicated intranet server on your LAN. If the server is down when a client computer attempts to update the package repos for a `pacman -Syu` operation then it will report an error. Personally, I use a Raspberry Pi that I keep as a dedicated intranet server (running [Arch Linux ARM][archarm] btw).
+I recommend that you sync the folder to a dedicated intranet server on your LAN. If the server is down when a client computer attempts to update the package repos for a `pacman -Syu` operation then it will report an error.
 
 [customrepo]: https://wiki.archlinux.org/title/Pacman/Tips_and_tricks#Custom_local_repository
 [archarm]: https://archlinuxarm.org/
