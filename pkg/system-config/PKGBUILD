@@ -52,6 +52,7 @@ package_system-config-base() {
 		'autoconf'                  # software build tool
 		'automake'                  # software build tool
 		'bison'                     # software build tool
+		'debugedit'                 # debug build tool
 		'gcc'                       # software build tool
 		'highlight'                 # cli code highlighter, used by trizen
 		'make'                      # software build tool
