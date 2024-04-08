@@ -224,6 +224,9 @@ package_system-config-gnome() {
 		'gnome-tweaks'              # extra settings manager
 		'gnome-usage'               # system monitor utility
 	)
+
+	# prevent enabling multiple display managers
+	conflicts=('system-config-xfce')
 }
 
 package_system-config-nvidia() {
