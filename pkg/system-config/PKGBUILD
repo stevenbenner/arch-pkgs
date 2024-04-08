@@ -325,4 +325,7 @@ package_system-config-xfce() {
 		'mate-calc'                 # simple calculator
 		'xarchiver'                 # file archive tool
 	)
+
+	# prevent enabling multiple display managers
+	conflicts=('system-config-gnome')
 }
