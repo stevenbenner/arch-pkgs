@@ -56,6 +56,10 @@ post_upgrade() {
 	_set_iptables_rules
 	systemctl enable iptables.service
 
+	# faillock.conf
+	sed 's/# deny = 3/deny = 5/' -i /etc/security/faillock.conf
+	sed 's/# unlock_time = 600/unlock_time = 300/' -i /etc/security/faillock.conf
+
 	# systemd-boot-update
 	systemctl enable systemd-boot-update.service
 }
