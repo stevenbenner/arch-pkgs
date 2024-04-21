@@ -112,6 +112,7 @@ package_system-config-desktop() {
 	depends+=(
 		'chromium'                  # web browser
 		'firefox'                   # web browser
+		'hunspell-en_us'            # firefox spell checking
 		'keepassxc'                 # password manager
 		'mpv'                       # video playback software
 		'qalculate-gtk'             # advanced calculator
@@ -255,7 +256,6 @@ package_system-config-workstation() {
 		'clementine'                # music player
 		'gimp'                      # image editor
 		'hexchat'                   # irc client
-		'hunspell-en_us'            # firefox spell checking
 		'inkscape'                  # vector graphics editor
 		'libreoffice-fresh'         # libreoffice
 		'openvpn'                   # vpn client
