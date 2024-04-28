@@ -181,6 +181,7 @@ package_system-config-gnome() {
 	# supporting packages
 	depends+=(
 		'gnome-browser-connector'   # chromium support for extensions.gnome.org
+		'hunspell'                  # spell checking backend for enchant
 		'networkmanager'            # networking config/manager service
 		'power-profiles-daemon'     # power profile support
 	)
