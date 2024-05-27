@@ -61,6 +61,7 @@ package_system-config-base() {
 	# universal software
 	depends+=(
 		'colordiff'                 # diff command with syntax highlighting, used by dotfiles
+		'fastfetch'                 # system information utility
 		'git'                       # version control software, used for dotfiles and aur
 		'htop'                      # improved version of top
 		'iftop'                     # network interface usage tool
@@ -71,7 +72,6 @@ package_system-config-base() {
 		'nethogs'                   # network interface usage tool
 		'nmap'                      # network diagnostics tool
 		'pkgstats'                  # send installed packages and basic system info for statistics
-		'screenfetch'               # system information utility
 		'stow'                      # symlink utility, used for dotfiles
 		'traceroute'                # network diagnostics tool
 		'tree'                      # directory list tool
