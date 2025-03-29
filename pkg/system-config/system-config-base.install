@@ -47,7 +47,6 @@ post_upgrade() {
 	# pacman.conf
 	sed 's/#Color/Color/' -i /etc/pacman.conf
 	sed 's/#VerbosePkgLists/VerbosePkgLists/' -i /etc/pacman.conf
-	sed 's/#ParallelDownloads/ParallelDownloads/' -i /etc/pacman.conf
 
 	# reflector.conf
 	_set_reflector_config
