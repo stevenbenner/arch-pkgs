@@ -159,6 +159,7 @@ package_system-config-devel() {
 		'cloc'                      # source code line counter and report tool
 		'filezilla'                 # ftp/ftps/sftp client
 		'gdb'                       # debugging tool
+		'git-zsh-completion'        # official zsh completions for git
 		'grunt-cli'                 # javascript task runner
 		'meld'                      # visual diff and merge tool
 		'namcap'                    # pacman package analyzer
