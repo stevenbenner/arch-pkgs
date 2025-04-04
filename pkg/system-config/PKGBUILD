@@ -156,6 +156,7 @@ package_system-config-devel() {
 
 	# dev software
 	depends+=(
+		'aurpublish'                # arch user repository git project management tool
 		'cloc'                      # source code line counter and report tool
 		'filezilla'                 # ftp/ftps/sftp client
 		'gdb'                       # debugging tool
