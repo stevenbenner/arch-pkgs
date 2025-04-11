@@ -13,7 +13,7 @@ This software is licensed under the [MIT-0 license][license].
 
 ## Usage
 
-> **Note**\
+> [!NOTE]
 > I would recommend that you use this project for inspiration or fork it as a template for your own custom setup. You probably do not want to install these packages as-is because they will be specific to my usage in places (e.g. US-English, US-pacific time zone).
 
 ### Build the packages
