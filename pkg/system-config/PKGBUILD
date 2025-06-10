@@ -22,6 +22,7 @@ source=(
 	'ssh_known_hosts'
 	'paccache.hook'
 	'mirrorupgrade.hook'
+	'modprobe-nvidia.conf'
 )
 sha256sums=(
 	'033252d5100cbb0028d7c15e075f63e4eb5ff7f1a923cd5cb547bcfd6b024f5b'
@@ -29,6 +30,7 @@ sha256sums=(
 	'7365424a09fde1acd6f8e5c17399a9fa22cb87f791bddc62ffe9e52d2d2dbf16'
 	'ac76047ee7b0c57b225503f5d75cbdd70566e357f306ea5864688dc668aeac0a'
 	'76ac369fd16b74ed4c617fea03fd37d8b47fb181e5c165873dbbfa852ad3f867'
+	'ece12744f3ca404c60bfa9de9067d8916e3de69bba2074ee30bcbaca53bde08e'
 )
 
 package_system-config-base() {
@@ -246,6 +248,8 @@ package_system-config-nvidia() {
 		'nvidia'                    # nvidia drivers
 		'nvidia-settings'           # nvidia configuration utility
 	)
+
+	install -Dm0644 modprobe-nvidia.conf "$pkgdir/etc/modprobe.d/nvidia.conf"
 }
 
 package_system-config-workstation() {
