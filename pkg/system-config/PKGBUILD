@@ -23,6 +23,7 @@ source=(
 	'paccache.hook'
 	'mirrorupgrade.hook'
 	'modprobe-nvidia.conf'
+	'xorg-20-nvidia.conf'
 )
 sha256sums=(
 	'033252d5100cbb0028d7c15e075f63e4eb5ff7f1a923cd5cb547bcfd6b024f5b'
@@ -31,6 +32,7 @@ sha256sums=(
 	'ac76047ee7b0c57b225503f5d75cbdd70566e357f306ea5864688dc668aeac0a'
 	'76ac369fd16b74ed4c617fea03fd37d8b47fb181e5c165873dbbfa852ad3f867'
 	'ece12744f3ca404c60bfa9de9067d8916e3de69bba2074ee30bcbaca53bde08e'
+	'893829c53026c339ed80f330901fd9c29c274645a6566a9cd68be76ecb875394'
 )
 
 package_system-config-base() {
@@ -250,6 +252,7 @@ package_system-config-nvidia() {
 	)
 
 	install -Dm0644 modprobe-nvidia.conf "$pkgdir/etc/modprobe.d/nvidia.conf"
+	install -Dm0644 xorg-20-nvidia.conf "$pkgdir/etc/X11/xorg.conf.d/20-nvidia.conf"
 }
 
 package_system-config-workstation() {
