@@ -106,7 +106,6 @@ Special thanks to the Arch Linux enthusiasts who published articles and code exp
 ### Articles
 
 * https://disconnected.systems/blog/archlinux-meta-packages/
-* https://ownyourbits.com/2019/07/21/replicate-your-system-with-self-hosted-arch-linux-metapackages/
 * https://wiki.archlinux.org/title/Creating_packages
 
 ### Code
