@@ -248,7 +248,6 @@ package_system-config-nvidia() {
 
 	# packages
 	depends+=(
-		'libva-mesa-driver'         # va-api drivers
 		'nvidia'                    # nvidia drivers
 		'nvidia-settings'           # nvidia configuration utility
 	)
