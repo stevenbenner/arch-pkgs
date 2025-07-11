@@ -121,6 +121,7 @@ package_system-config-desktop() {
 		'hunspell-en_us'            # firefox spell checking
 		'keepassxc'                 # password manager
 		'mpv'                       # video playback software
+		'nvtop'                     # a top-like tool for graphics processors
 		'qalculate-gtk'             # advanced calculator
 		'vlc'                       # video playback software
 		'yt-dlp'                    # cli video downloader, support youtube (and others) in mpv
