@@ -2,7 +2,7 @@
 
 This is my collection of [Arch Linux][archlinux] system configuration [PKGBUILD][pkgbuild] files.
 
-The purpose of this project is to simplify the process of setting up and maintaining multiple Arch Linux systems, as well as cleaning up the list of explicitly installed packages. With these [meta packages][metapackages] I can install most everything needed for my uses and automate some basic setup tasks.
+The purpose of this project is to simplify the process of setting up and maintaining multiple Arch Linux systems, as well as cleaning up the list of explicitly installed packages. With these [meta packages][metapackages] I can install most everything needed for my uses and automate some basic setup and system administration tasks.
 
 This software is licensed under the [MIT-0 license][license].
 
