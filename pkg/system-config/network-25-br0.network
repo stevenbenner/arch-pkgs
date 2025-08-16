@@ -1,7 +1,6 @@
-# /etc/systemd/network/20-ethernet.network
+# /etc/systemd/network/25-br0.network
 [Match]
-Kind=!*
-Type=ether
+Name=br0
 
 [Link]
 RequiredForOnline=routable

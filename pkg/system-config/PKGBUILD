@@ -23,7 +23,9 @@ source=(
 	'paccache.hook'
 	'mirrorupgrade.hook'
 	'modprobe-nvidia.conf'
-	'network-20-ethernet.network'
+	'network-25-br0-ethernet.network'
+	'network-25-br0.netdev'
+	'network-25-br0.network'
 	'xorg-20-nvidia.conf'
 	'xorg-50-mouse-acceleration.conf'
 )
@@ -34,7 +36,9 @@ sha256sums=(
 	'ac76047ee7b0c57b225503f5d75cbdd70566e357f306ea5864688dc668aeac0a'
 	'76ac369fd16b74ed4c617fea03fd37d8b47fb181e5c165873dbbfa852ad3f867'
 	'ece12744f3ca404c60bfa9de9067d8916e3de69bba2074ee30bcbaca53bde08e'
-	'134ca6f449d7724d976a2bb5339befbc3fd65435b74ee133302f661bad074767'
+	'03322f52044e6049613e8d42fd04eff08f4c4154b6745dee75d5d121d5fab5f2'
+	'ca3b9790630bc0d8aeb1bb75ce28fa2306ce9259fcc205dc4fb231cb7054a3cb'
+	'6446b446573202fe75364850148cd68169edaaee51b16672c5a03a8a595976f8'
 	'10d5a050d0470a10f2b4a962082e399f0db10370f08dbf2ef949612ba37ce7fc'
 	'03d53ef1269aaa67efcadfeea1ffcb75f4eeca4a045b65d707c7a1ea21014b6a'
 )
@@ -344,6 +348,8 @@ package_system-config-xfce() {
 	# prevent enabling multiple display managers
 	conflicts=('system-config-gnome')
 
-	install -Dm0644 network-20-ethernet.network "$pkgdir/etc/systemd/network/20-ethernet.network"
+	install -Dm0644 network-25-br0-ethernet.network "$pkgdir/etc/systemd/network/25-br0-ethernet.network"
+	install -Dm0644 network-25-br0.netdev "$pkgdir/etc/systemd/network/25-br0.netdev"
+	install -Dm0644 network-25-br0.network "$pkgdir/etc/systemd/network/25-br0.network"
 	install -Dm0644 xorg-50-mouse-acceleration.conf "$pkgdir/etc/X11/xorg.conf.d/50-mouse-acceleration.conf"
 }

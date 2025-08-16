@@ -1,0 +1,7 @@
+# /etc/systemd/network/25-br0-ethernet.network
+[Match]
+Kind=!*
+Type=ether
+
+[Network]
+Bridge=br0
