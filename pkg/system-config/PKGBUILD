@@ -26,10 +26,12 @@ source=(
 	'network-25-br0-ethernet.network'
 	'network-25-br0.netdev'
 	'network-25-br0.network'
+	'resolved-fallback-dns.conf'
 	'xorg-20-nvidia.conf'
 	'xorg-50-mouse-acceleration.conf'
 )
 sha256sums=(
+	'SKIP'
 	'SKIP'
 	'SKIP'
 	'SKIP'
@@ -351,5 +353,6 @@ package_system-config-xfce() {
 	install -Dm0644 network-25-br0-ethernet.network "$pkgdir/etc/systemd/network/25-br0-ethernet.network"
 	install -Dm0644 network-25-br0.netdev "$pkgdir/etc/systemd/network/25-br0.netdev"
 	install -Dm0644 network-25-br0.network "$pkgdir/etc/systemd/network/25-br0.network"
+	install -Dm0644 resolved-fallback-dns.conf "$pkgdir/etc/systemd/resolved.conf.d/fallback-dns.conf"
 	install -Dm0644 xorg-50-mouse-acceleration.conf "$pkgdir/etc/X11/xorg.conf.d/50-mouse-acceleration.conf"
 }
