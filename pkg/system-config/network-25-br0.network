@@ -7,4 +7,6 @@ RequiredForOnline=routable
 
 [Network]
 DHCP=yes
+IPv6AcceptRA=no
+LinkLocalAddressing=ipv4
 UseDomains=true
