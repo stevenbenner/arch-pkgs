@@ -6,6 +6,7 @@ pkgname=(
 	'system-config-desktop'
 	'system-config-devel'
 	'system-config-gnome'
+	'system-config-networkd'
 	'system-config-nvidia'
 	'system-config-workstation'
 	'system-config-xfce'
@@ -249,6 +250,22 @@ package_system-config-gnome() {
 	conflicts=('system-config-xfce')
 }
 
+package_system-config-networkd() {
+	pkgdesc='Networking and DNS using networkd and resolved'
+	install='system-config-networkd.install'
+
+	# inherit base config
+	depends=('system-config-base')
+
+	install -Dm0644 network-25-br0-ethernet.network "$pkgdir/etc/systemd/network/25-br0-ethernet.network"
+	install -Dm0644 network-25-br0.netdev "$pkgdir/etc/systemd/network/25-br0.netdev"
+	install -Dm0644 network-25-br0.network "$pkgdir/etc/systemd/network/25-br0.network"
+	install -Dm0644 resolved-fallback-dns.conf "$pkgdir/etc/systemd/resolved.conf.d/fallback-dns.conf"
+
+	# gnome is configured for networkmanager
+	conflicts=('system-config-gnome')
+}
+
 package_system-config-nvidia() {
 	pkgdesc='Nvidia graphics system configuration'
 
@@ -293,6 +310,9 @@ package_system-config-xfce() {
 
 	# inherit common desktop config
 	depends=('system-config-desktop')
+
+	# use systemd networking
+	depends+=('system-config-networkd')
 
 	# supporting packages
 	depends+=(
@@ -350,9 +370,5 @@ package_system-config-xfce() {
 	# prevent enabling multiple display managers
 	conflicts=('system-config-gnome')
 
-	install -Dm0644 network-25-br0-ethernet.network "$pkgdir/etc/systemd/network/25-br0-ethernet.network"
-	install -Dm0644 network-25-br0.netdev "$pkgdir/etc/systemd/network/25-br0.netdev"
-	install -Dm0644 network-25-br0.network "$pkgdir/etc/systemd/network/25-br0.network"
-	install -Dm0644 resolved-fallback-dns.conf "$pkgdir/etc/systemd/resolved.conf.d/fallback-dns.conf"
 	install -Dm0644 xorg-50-mouse-acceleration.conf "$pkgdir/etc/X11/xorg.conf.d/50-mouse-acceleration.conf"
 }

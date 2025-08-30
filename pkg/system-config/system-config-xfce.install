@@ -1,13 +1,3 @@
 post_install() {
-	post_upgrade
-}
-
-post_upgrade() {
-	# lightdm
 	systemctl enable --now lightdm.service
-
-	# networking
-	systemctl enable --now systemd-networkd.service
-	systemctl enable --now systemd-resolved.service
-	ln --symbolic --force ../run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
 }
