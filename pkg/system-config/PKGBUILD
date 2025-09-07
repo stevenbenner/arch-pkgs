@@ -284,6 +284,7 @@ package_system-config-nvidia() {
 
 package_system-config-workstation() {
 	pkgdesc='Workstation system configuration'
+	install='system-config-workstation.install'
 
 	# inherit common desktop config
 	depends=('system-config-desktop')
@@ -298,9 +299,15 @@ package_system-config-workstation() {
 		'openvpn'                   # vpn client
 		'pidgin'                    # instant messaging client
 		'pidgin-otr'                # otr messaging plugin for pidgin
+		'qemu-desktop'              # virtual machines
 		'thunderbird'               # email and rss client
 		'virtualbox'                # virtual machines
 		'virtualbox-guest-iso'      # guest drivers for virtualbox
+	)
+
+	# optional config
+	optdepends=(
+		'system-config-networkd: QEMU bridge network with systemd networkd'
 	)
 }
 

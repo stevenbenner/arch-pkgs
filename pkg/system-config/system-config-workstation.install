@@ -1,0 +1,9 @@
+post_install() {
+	post_upgrade
+}
+
+post_upgrade() {
+	# qemu config
+	grep --fixed-strings --line-regexp --quiet 'allow br0' /etc/qemu/bridge.conf ||
+		echo 'allow br0' >> /etc/qemu/bridge.conf
+}
