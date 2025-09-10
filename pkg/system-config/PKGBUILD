@@ -326,6 +326,7 @@ package_system-config-xfce() {
 		'light-locker'              # session locker for lightdm
 		'lightdm'                   # display manager
 		'lightdm-gtk-greeter'       # default greeter (login screen) for lightdm
+		'papirus-icon-theme'        # icon theme
 		'pavucontrol'               # dependency of xfce4-pulseaudio-plugin
 		'redshift'                  # nighttime screen color temperature utility
 		'xcape'                     # key mapping tool, used for super key support in dotfiles
