@@ -23,7 +23,6 @@ source=(
 	'ssh_known_hosts'
 	'paccache.hook'
 	'mirrorupgrade.hook'
-	'modprobe-nvidia.conf'
 	'network-25-br0-ethernet.network'
 	'network-25-br0.netdev'
 	'network-25-br0.network'
@@ -32,7 +31,6 @@ source=(
 	'xorg-50-mouse-acceleration.conf'
 )
 sha256sums=(
-	'SKIP'
 	'SKIP'
 	'SKIP'
 	'SKIP'
@@ -278,7 +276,6 @@ package_system-config-nvidia() {
 		'nvidia-settings'           # nvidia configuration utility
 	)
 
-	install -Dm0644 modprobe-nvidia.conf "$pkgdir/etc/modprobe.d/nvidia.conf"
 	install -Dm0644 xorg-20-nvidia.conf "$pkgdir/etc/X11/xorg.conf.d/20-nvidia.conf"
 }
 
