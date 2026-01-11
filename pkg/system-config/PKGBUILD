@@ -274,7 +274,7 @@ package_system-config-nvidia() {
 
 	# packages
 	depends+=(
-		'nvidia'                    # nvidia drivers
+		'nvidia-open'               # nvidia drivers
 		'nvidia-settings'           # nvidia configuration utility
 	)
 
