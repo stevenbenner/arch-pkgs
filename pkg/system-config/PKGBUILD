@@ -298,8 +298,6 @@ package_system-config-workstation() {
 		'pidgin-otr'                # otr messaging plugin for pidgin
 		'qemu-desktop'              # virtual machines
 		'thunderbird'               # email and rss client
-		'virtualbox'                # virtual machines
-		'virtualbox-guest-iso'      # guest drivers for virtualbox
 	)
 
 	# optional config
