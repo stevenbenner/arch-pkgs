@@ -3,6 +3,7 @@
 pkgbase=system-config
 pkgname=(
 	'system-config-base'
+	'system-config-cups'
 	'system-config-desktop'
 	'system-config-devel'
 	'system-config-gnome'
@@ -115,6 +116,21 @@ package_system-config-base() {
 	chmod 750 "$pkgdir/etc/sudoers.d/"
 }
 
+package_system-config-cups() {
+	pkgdesc='CUPS printing server base configuration'
+	install='system-config-cups.install'
+
+	# inherit common desktop config
+	depends=('system-config-desktop')
+
+	# packages
+	depends+=(
+		'cups'                      # print server
+		'ghostscript'               # print document processor
+		'nss-mdns'                  # mdns for avahi to support network printers
+	)
+}
+
 package_system-config-desktop() {
 	pkgdesc='Desktop system configuration'
 
@@ -156,6 +172,7 @@ package_system-config-desktop() {
 	# graphics drivers
 	optdepends=(
 		'mesa: AMD graphics support'
+		'system-config-cups: CUPS printing server'
 		'system-config-nvidia: Nvidia graphics support'
 		'xf86-video-intel: Intel graphics support on Xorg'
 	)

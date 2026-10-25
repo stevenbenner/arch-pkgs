@@ -1,0 +1,17 @@
+post_install() {
+	systemctl enable --now cups.service
+	systemctl enable --now avahi-daemon.service
+
+	cat <<- EOF
+		CUPS printing base dependencies have been installed. You still need
+		to install any necessary printer drivers and configure the printer
+		settings in the CUPS server.
+
+		You can verify that the printer is detected using these commands:
+		    avahi-browse --all --ignore-local --resolve --terminate
+		    lpinfo -v
+
+		Then configure the printer in the print server at this URL:
+		    http://localhost:631/
+	EOF
+}
