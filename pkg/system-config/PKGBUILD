@@ -12,7 +12,7 @@ pkgname=(
 	'system-config-workstation'
 	'system-config-xfce'
 )
-pkgver=37
+pkgver=38
 pkgrel=1
 pkgdesc='Arch Linux system configuration'
 arch=('any')
