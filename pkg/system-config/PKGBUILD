@@ -305,7 +305,7 @@ package_system-config-workstation() {
 
 	# software
 	depends+=(
-		'aspell'                    # pidgin spell checking
+		'aspell'                    # spell checking backend for enchant
 		'gimp'                      # image editor
 		'inkscape'                  # vector graphics editor
 		'libreoffice-fresh'         # libreoffice
