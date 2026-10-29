@@ -311,8 +311,6 @@ package_system-config-workstation() {
 		'inkscape'                  # vector graphics editor
 		'libreoffice-fresh'         # libreoffice
 		'openvpn'                   # vpn client
-		'pidgin'                    # instant messaging client
-		'pidgin-otr'                # otr messaging plugin for pidgin
 		'qemu-desktop'              # virtual machines
 		'thunderbird'               # email and rss client
 	)
