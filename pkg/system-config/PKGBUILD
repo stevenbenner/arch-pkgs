@@ -307,7 +307,6 @@ package_system-config-workstation() {
 	depends+=(
 		'aspell'                    # pidgin spell checking
 		'gimp'                      # image editor
-		'hexchat'                   # irc client
 		'inkscape'                  # vector graphics editor
 		'libreoffice-fresh'         # libreoffice
 		'openvpn'                   # vpn client
