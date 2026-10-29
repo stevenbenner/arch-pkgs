@@ -357,7 +357,6 @@ package_system-config-xfce() {
 		'xfce4-terminal'            # terminal
 		'xfdesktop'                 # desktop manager
 		'xfwm4'                     # window manager
-		'xfwm4-themes'              # default themes
 	)
 
 	# xfce-goodies group packages
@@ -366,7 +365,6 @@ package_system-config-xfce() {
 		'ristretto'                 # image viewer
 		'thunar-archive-plugin'     # zip/tar/etc support for thunar
 		'thunar-media-tags-plugin'  # media tags support for thunar
-		'xfce4-artwork'             # backgrounds
 		'xfce4-cpufreq-plugin'      # cpu status widget
 		'xfce4-cpugraph-plugin'     # cpu status widget
 		'xfce4-diskperf-plugin'     # hdd status widget
