@@ -113,5 +113,4 @@ Special thanks to the Arch Linux enthusiasts who published articles and code exp
 * https://github.com/mdaffin/arch-pkgs
 * https://github.com/Foxboron/PKGBUILDS/tree/master/foxboron-system
 * https://github.com/Earnestly/pkgbuilds/tree/master/system-config
-* https://github.com/krathalan/pkgbuilds
 * https://github.com/patatahooligan/meta-packages
