@@ -234,6 +234,7 @@ package_system-config-gnome() {
 		'gnome-color-manager'       # color profile utility
 		'gnome-control-center'      # gnome settings tool
 		'gnome-disk-utility'        # drive/partition viewer
+		'gnome-extensions-app'      # gnome extensions manager
 		'gnome-font-viewer'         # font viewer
 		'gnome-keyring'             # key ring
 		'gnome-logs'                # log viewer
