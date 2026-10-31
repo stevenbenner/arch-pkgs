@@ -214,19 +214,20 @@ package_system-config-gnome() {
 
 	# supporting packages
 	depends+=(
-		'gnome-browser-connector'   # chromium support for extensions.gnome.org
 		'hunspell'                  # spell checking backend for enchant
 		'networkmanager'            # networking config/manager service
 		'power-profiles-daemon'     # power profile support
 	)
 
-	# gnome group packages
+	# gnome packages
 	depends+=(
 		'baobab'                    # directory tree analyzer
 		'eog'                       # image viewer
+		'file-roller'               # file archive tool
 		'gdm'                       # gnome display manager
 		'gedit'                     # text editor
 		'gnome-backgrounds'         # small collection of background images
+		'gnome-browser-connector'   # chromium support for extensions.gnome.org
 		'gnome-calculator'          # calculator
 		'gnome-characters'          # character map viewer
 		'gnome-clocks'              # clock
@@ -244,6 +245,8 @@ package_system-config-gnome() {
 		'gnome-system-monitor'      # system monitor utility
 		'gnome-terminal'            # terminal
 		'gnome-themes-extra'        # gnome themes
+		'gnome-tweaks'              # extra settings manager
+		'gnome-usage'               # system monitor utility
 		'gnome-user-docs'           # gnome documentation
 		'gvfs'                      # virtual filesystem tool
 		'gvfs-nfs'                  # nfs support for gvfs
@@ -252,13 +255,6 @@ package_system-config-gnome() {
 		'sushi'                     # nautilus file previewer
 		'xdg-desktop-portal-gnome'  # xdg-desktop-portal for gnome
 		'xdg-user-dirs-gtk'         # creates xdg user directories
-	)
-
-	# gnome-extra group packages
-	depends+=(
-		'file-roller'               # file archive tool
-		'gnome-tweaks'              # extra settings manager
-		'gnome-usage'               # system monitor utility
 	)
 
 	# prevent enabling multiple display managers
